@@ -30,10 +30,10 @@ int main(int argc, char ** argv) {
 	for (int i = 0; i < ARRAY_SIZE; ++i) {
 		printf("%f", h_out[i]);
 		printf(((i % 4) != 3)? "\t" : "\n" );
-
-		cudaFree(d_in);
-		cudaFree(d_out);
-
-		return 0;
 	}
+	
+	cudaFree(d_in);
+	cudaFree(d_out);
+
+	return 0;
 }
